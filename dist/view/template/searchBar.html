@@ -1,0 +1,9 @@
+<div class="searchBar tc pr">
+	<div class="cityBar fl" ng-click="$event.stopPropagation();showCity()">
+		<span>{{selctCityBar.name}}</span>
+		<span class="cityIcon dis-ib"></span>
+	</div>
+	<div class="search pr">
+		<input type="text" ng-model="name" placeholder="搜索公司或职位"><span name={{name}} class="searchIcon dis-ib tc" ng-click="search({company:this.name});"><i class="dis-ib vm"></i></span>
+	</div>
+</div>

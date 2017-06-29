@@ -1,0 +1,10 @@
+<div class="city {{isHide?'hide':''}}">
+	<div class="cityBar tc pr">
+		<i class="pa" ng-click="$event.stopPropagation();hideCity();">&lt;</i>
+		<span>拉勾网</span>
+	</div>
+	<div class="title">热门城市</div>
+	<div class="cityClass">
+		<span id={{item.id}} ng-repeat="item in citysList" ng-click="selctCityF(item)" class="{{selected == item.id?'selected':''}}">{{item.name}}</span>
+	</div>
+</div>

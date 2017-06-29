@@ -1,0 +1,17 @@
+<div class="reg">
+	<form name="form">
+		<div class="pr">
+			<input name="phone" validator="required,phone" ng-model="user.phone" type="text" placeholder="手机号">
+		</div>
+		<div class="ipt-par pr">
+			<input name="code" validator="required,code" type="text" ng-model="user.code" placeholder="短信验证码"><span class="sendCode  {{time?'disabled':'sendAbled'}}" ng-click="time?1 == 1:sendCode();" ng-bind="time?time:'获取'"></span>
+		</div>
+		<div class="pr">
+			<input name="pwd" validator="required,pwd" type="password" ng-model="user.pwd" placeholder="设置6-16位密码">
+		</div>
+		<a href="##" validation-submit="form" ng-click="submit()" class="btn reg-btn">注册</a>
+		<p class="reg-tip">已有账号？</p>
+		<a ui-sref="login" class="btn log-btn">登录</a>
+		<p class="reg-tip">点击注册，即代表您同意<a href="##">《拉勾用户协议》</a></p>
+	</form>
+</div>

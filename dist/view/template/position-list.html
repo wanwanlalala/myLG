@@ -1,0 +1,18 @@
+<ul class="positionList">
+	<li ng-show = "listLen == 0" class="empty tc">拉勾网上暂时没有该职位</li>
+	<li class="clearfix" ui-sref="position({id:
+	item.id})" ng-repeat="item in list | filterByObj:filterObj">
+		<img ng-src="{{item.imageUrl}}" alt="" class="fl">
+		<div class="fl">
+			<h3 ng-bind="item.companyName" class="title"></h3>
+			<p ng-bind="item.job+' ['+item.cityName+']'" class="job-des"></p>
+			<p ng-bind="item.date" class="date"></p>
+		</div>
+		<div class="isFavor fr">
+			<span ng-if="isFavor" class="isFavor  {{item.select?'favorIcon':'notIcon'}}" ng-click="$event.stopPropagation();favor(item);"></span>
+			<span ng-bind="item.salaryName" class="salary"></span>
+			<!-- 用于垂直居中 -->
+			<span class="makeMid"></span>
+		</div>
+	</li>
+</ul>

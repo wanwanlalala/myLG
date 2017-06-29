@@ -1,0 +1,20 @@
+<div app-head></div>
+<div class="myCont clearfix">
+	<div ng-if="isLog" class="userInfo">
+		<div class="userIcon">
+			<img ng-src="{{image}}" alt="">
+		</div>
+		<p ng-bind="name" class="userName"></p>
+	</div>
+	<div ng-hide="isLog" class="isLog">
+		<a class="logBtn dis-ib" ui-sref="login">登录 / 注册</a>
+	</div>
+	<div class="notLog">
+		<a ui-sref="post" class="btns fl">投递</a>
+		<!-- <a ui-sref="interview" class="btns fr">面试</a>
+		<a ui-sref="invitation" class="btns fl">邀约</a> -->
+		<a ui-sref="favor" class="btns fr">收藏</a>
+		<a ng-if="isLog" href="javascript:void(0)" class="btns logoutBtn" ng-click="logout();">退出登录</a>
+	</div>
+</div>
+<div app-foot></div>

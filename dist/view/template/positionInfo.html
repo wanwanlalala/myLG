@@ -1,0 +1,17 @@
+<div class="positionInfo">
+	<div class="namePar clearfix">
+		<h3 class="name pr dis-ib" ng-bind="pos.name"></h3>
+		<div class="isActive tc fr" ng-click="favor()" ng-show="isLogin">
+			<img class="dis-b" ng-src="{{imagePath}}" alt="">
+			<span class="dis-b grayColor" ng-bind="isActiveTxt"></span>
+		</div>
+	</div>
+	<div class="positionDes">
+		<span class="dis-ib icon tl" ng-bind="pos.salaryName"></span>
+		<span class="dis-ib icon tc" ng-bind="pos.cityName"></span>
+		<span class="dis-ib icon tr" ng-bind="pos.nature"></span>
+		<span class="dis-ib icon tl" ng-bind="pos.experience"></span>
+		<span class="dis-ib icon tc" ng-bind="pos.education"></span>
+		<p class="benefit" ng-bind="'职位诱惑：'+pos.benefit"></p>
+	</div>
+</div>

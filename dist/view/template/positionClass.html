@@ -1,0 +1,15 @@
+<div class="positionClass">
+	<p class="title">职位分类</p>
+	<div class="classDetail clearfix">
+		<div class="detail fl tc vm" ng-repeat='item in com.positionClass'>
+			<span ng-click="showPositionList($index)" class="{{$index ===isActive?'active':''}} dis-ib grayColor" ng-bind='item.name'></span>
+		</div>
+	</div>	
+	<ul class="comPos">
+		<li ng-repeat="pos in positionList" class="pr">
+			<p ng-bind="pos.name+' [ '+pos.cityName+' ] '" class="name"></p>
+			<p ng-bind="pos.createdDate" class="date grayColor"></p>
+			<span ng-bind="pos.salary" class="salary dis-ib pa"></span>
+		</li>
+	</ul>
+</div>

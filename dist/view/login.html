@@ -1,0 +1,15 @@
+<div class="login">
+	<form name="form">
+		<div class="ipt-group">
+			<div class="ipt-par pr">
+				<input name="phone" validator="required,phone" type="text" ng-model="user.phone"  placeholder="已验证手机/邮箱" style="border-bottom: 0.5px solid #018D65;">
+			</div>
+			<div class="ipt-par pr">
+				<input name="pwd" validator="required,pwd" type="password" ng-model="user.pwd" placeholder="密码">
+			</div>
+		</div>
+		<button validation-submit="form" class="log btn" ng-click="submit()">登录</button>
+		<p class="reg-tip dis-ib">还没账号?</p>
+		<a class="reg btn" ui-sref="register">注册</a>
+	</form>
+</div>
